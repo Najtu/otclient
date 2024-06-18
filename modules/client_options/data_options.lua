@@ -23,25 +23,51 @@ return {
             g_window.setFullscreen(value)
         end
     },
-    classicControl = false,
-    smartWalk = false,
+    classicControl = {
+        value = false,
+    },
+    smartWalk = {
+        value = false,
+    },
     preciseControl = {
         value = false,
         action = function(value, options, controller, panels, extraWidgets)
             g_game.setScheduleLastWalk(not value)
         end
     },
-    autoChaseOverride = true,
-    moveStack = false,
-    showStatusMessagesInConsole = true,
-    showEventMessagesInConsole = true,
-    showInfoMessagesInConsole = true,
-    showTimestampsInConsole = true,
-    showLevelsInConsole = true,
-    showPrivateMessagesInConsole = true,
-    showOthersStatusMessagesInConsole = false,
-    showPrivateMessagesOnScreen = true,
-    openMaximized = false,
+    autoChaseOverride = {
+        value = true,
+    },
+    moveStack = {
+        value = false,
+    },
+    showStatusMessagesInConsole = {
+        value = true,
+    },
+    showEventMessagesInConsole = {
+        value = true,
+    },
+    showInfoMessagesInConsole = {
+        value = true,
+    },
+    showTimestampsInConsole = {
+        value = true,
+    },
+    showLevelsInConsole = {
+        value = true,
+    },
+    showPrivateMessagesInConsole = {
+        value = true,
+    },
+    showOthersStatusMessagesInConsole = {
+        value = false,
+    },
+    showPrivateMessagesOnScreen = {
+        value = true,
+    },
+    openMaximized = {
+        value = false,
+    },
     backgroundFrameRate = {
         value = 201,
         action = function(value, options, controller, panels, extraWidgets)

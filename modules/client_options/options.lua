@@ -86,14 +86,6 @@ controller:bindKeyDown('Ctrl+Shift+F', function() toggleOption('fullscreen') end
 controller:bindKeyDown('Ctrl+N', toggleDisplays)
 
 function controller:onInit()
-    for k, obj in pairs(options) do
-        if type(obj) ~= "table" then
-            obj = { value = obj }
-            options[k] = obj
-        end
-        g_settings.setDefault(k, obj.value)
-    end
-
     extraWidgets.optionsButton = modules.client_topmenu.addLeftButton('optionsButton', tr('Options'),
         '/images/topbuttons/options',
         toggle)
